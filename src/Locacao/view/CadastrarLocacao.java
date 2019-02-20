@@ -7,7 +7,7 @@
 package Locacao.view;
 
 import cliente.dominio.Cliente;
-import cliente.service.Servico;
+import cliente.controller.Servico;
 import static java.lang.Integer.parseInt;
 import java.sql.SQLException;
 import java.time.LocalDate;

@@ -504,9 +504,8 @@ public class BuscarClienteJF extends javax.swing.JFrame {
 
             if (cliente != null){
                 buscaNomePFisica.setText(cliente.getNome());
-                buscaNascPFisica.setText(formatarDataSaida(cliente.getPFisica().getDataNascimento()));
                 buscaCpfPFisica.setText(formatarCpfEntrada(cliente.getPFisica().getCpf()));
-                buscaEndePFisica.setText(cliente.getEndereco());
+           
                 setarSexoBusca(cliente.getPFisica());
                 buscou = true;
                 preencherTabela();
