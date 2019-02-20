@@ -98,17 +98,6 @@ public class Servico {
         }
     }
     
-    public boolean cadClientePJuridica(Cliente cliente, PessoaJuridica pessoa) throws SQLException{
-        boolean cadastroSucesso = dao.inserirCliente(cliente);
-        if (cadastroSucesso){
-            if (inserirPJuridica(pessoa));{
-                return true;
-            }
-        }
-        else{
-            return false;
-        }
-    }      
     
     public boolean buscarCPF(String cpf){
         if (dao.verificarCpfBD(cpf)){
