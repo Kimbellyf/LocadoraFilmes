@@ -5,11 +5,9 @@
  */
 package cliente.view;
 
-import cliente.dominio.Cliente;
-import cliente.dominio.PessoaFisica;
+
+import cliente.model.Cliente;
 import javax.swing.JOptionPane;
-import cliente.service.ServicoClienteCPF;
-import cliente.service.Servico;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,10 +18,7 @@ import javax.swing.JFrame;
  * @author Anderson
  */
 public class CadastroPFisica extends javax.swing.JFrame {
-    private Servico service = new Servico();
-    private String sexo;
-    
-    
+ 
     public CadastroPFisica() {
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -212,7 +207,7 @@ public class CadastroPFisica extends javax.swing.JFrame {
 
     private boolean validarCampos(){
         String strCpf = cpfCadPFisica.getText();
-        ServicoClienteCPF cpf = new ServicoClienteCPF(strCpf, true);
+
         
         if (service.isEmpty(String.valueOf(nomeCadPFisica.getText()))){
             JOptionPane.showMessageDialog(null, "Nome inválido");
